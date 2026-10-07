@@ -1,0 +1,12 @@
+CARDIOLOGIA;5;Personale gentile e puntuale
+CARDIOLOGIA;4;Attesa breve
+ORTOPEDIA;2;Attesa lunga e poca informazione
+DERMATOLOGIA;5;Medico chiaro e gentile
+ORTOPEDIA;3;Attesa lunga ma visita accurata
+CARDIOLOGIA;6;Tutto perfetto
+DERMATOLOGIA;4;Gentile
+ORTOPEDIA;1;Attesa lunga, nessuno risponde al telefono
+DERMATOLOGIA;ottimo;Bene
+CARDIOLOGIA;3;Parcheggio difficile
+ORTOPEDIA;2;Poca chiarezza sui tempi di attesa
+DERMATOLOGIA;5;Puntuale

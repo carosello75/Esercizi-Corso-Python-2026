@@ -1,0 +1,11 @@
+# NovaStore - codice;descrizione;categoria;prezzo
+NS-P01;Cuffie Bluetooth;AUDIO;49,90
+NS-P02;Soundbar compatta;AUDIO;129,00
+NS-P03;Monitor 24 pollici;VIDEO;159,00
+NS-P04;Webcam HD;VIDEO;59,00
+NS-P05;Cavo HDMI 2 m;ACCESSORI;9,90
+NS-P06;Tappetino per mouse;ACCESSORI;7,50
+NS-P07;Tastiera meccanica;INFORMATICA;89,00
+NS-P08;Chiavetta USB 64 GB;ARCHIVIAZIONE;12,90
+NS-P09;Mouse wireless;INFORMATICA;19,90
+NS-P10;Hub USB-C;ACCESSORI;trentaquattro

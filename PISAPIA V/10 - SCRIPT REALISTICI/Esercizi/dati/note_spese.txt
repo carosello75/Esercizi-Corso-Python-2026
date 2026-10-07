@@ -1,0 +1,13 @@
+SP01;VIAGGIO;85,40;Treno Salerno-Milano
+SP02;ALLOGGIO;110,00;Hotel una notte
+SP03;vitto ;24,50;Cena di lavoro
+SP04;VITTO;38,00;Pranzo con il cliente
+SP05;MATERIALE;12,90;Cancelleria
+
+SP06;VIAGGIO;trenta;Taxi per l'aeroporto
+SP07;ALLOGGIO;135,00;Hotel in centro
+SP08;REGALI;40,00;Omaggio al cliente
+SP09;VITTO;18,00
+SP10;VIAGGIO;62,30;Treno di ritorno
+SP11;MATERIALE;49,90;Mouse e tastiera
+SP12;vitto;30,00;Pranzo in trasferta

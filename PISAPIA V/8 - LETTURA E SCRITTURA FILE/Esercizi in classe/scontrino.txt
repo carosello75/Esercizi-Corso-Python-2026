@@ -1,0 +1,4 @@
+Scontrino Cassa
+Numero articoli: 3
+Totale | 300.14 | €
+Grazie!

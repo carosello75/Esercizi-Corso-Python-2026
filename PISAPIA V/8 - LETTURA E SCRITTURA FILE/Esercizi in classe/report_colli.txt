@@ -1,0 +1,4 @@
+CODICE            ZONA    KG      
+LS-2026-MI-0042   NORD    12.5    
+LS-2026-NA-0913   SUD     6.7     
+LS-2026-CA-1806   ISOLE   36.4    

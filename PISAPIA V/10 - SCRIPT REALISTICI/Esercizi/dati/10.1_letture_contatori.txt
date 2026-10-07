@@ -1,0 +1,9 @@
+# Acquedotto di Villanova - utenza;intestatario;lettura_precedente;lettura_attuale
+VL-001;Rossi Anna;1250;1298
+VL-002;Bianchi Marco;830;912
+VL-003;Esposito Carla;2041;2172
+VL-004;Ferri Luigi;455;505
+VL-005;Greco Paola;1710;1830
+VL-006;Marino Ugo;960;981
+VL-007;Conti Elisa;3302;3423
+VL-008;Rizzo Dario;675;744

@@ -1,0 +1,16 @@
+Amato Chiara;ERP-VILLANOVA;6,5
+Bruno Dario;APP-AURORA;8
+Amato Chiara;APP-AURORA;7,5
+Caruso Elisa;ERP-VILLANOVA;8
+Bruno Dario;APP-AURORA;9,5
+Amato Chiara;ERP-VILLANOVA;8
+Caruso Elisa;PORTALE-LOGISUD;7
+Bruno Dario;PORTALE-LOGISUD;otto
+Amato Chiara;PORTALE-LOGISUD;8
+Caruso Elisa;ERP-VILLANOVA;8
+Bruno Dario;APP-AURORA;9
+Amato Chiara;APP-AURORA;6
+Caruso Elisa;PORTALE-LOGISUD;-2
+Bruno Dario;ERP-VILLANOVA;8
+Caruso Elisa;ERP-VILLANOVA;14
+Amato Chiara;ERP-VILLANOVA;7

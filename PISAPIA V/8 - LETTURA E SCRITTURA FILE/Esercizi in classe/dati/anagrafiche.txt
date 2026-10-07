@@ -1,0 +1,14 @@
+# dadas
+Marta;Serra;MARTA.SERRA@example.it
+
+Marco; Rinaldi ;marco.rinaldi@example.it
+anna;de luca;ANNA.DELUCA@Example.IT
+Paolo;Ferraro;paolo.ferraro@example.it
+Chiara;Motta;chiara.motta@EXAMPLE.it
+luca;Bellini;  luca.bellini@example.it
+Sara;Cristofaro;sara.cristofaro@example.it
+Davide;Nocera;DAVIDE.NOCERA@example.it
+elena;Guarino;elena.guarino@example.it
+Roberto;Palladino;roberto.palladino@Example.it
+Nadia;Iacovelli;nadia.iacovelli@example.it
+Simone; Barbato ;SIMONE.BARBATO@EXAMPLE.IT
