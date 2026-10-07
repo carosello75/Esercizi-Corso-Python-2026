@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+.intestazione {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intestazione h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.ricerca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 700px;
+  margin: 0 auto 12px;
+}
+
+.ricerca label {
+  flex: 0 0 130px;
+  text-align: right;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b8b8d0;
+}
+
+.ricerca input {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  outline: none;
+}
+
+.ricerca input::placeholder {
+  color: #9a9ab5;
+}
+
+.ricerca input:focus {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.ricerca button {
+  padding: 14px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: #e94e77;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ricerca button:hover {
+  background: #ff5f88;
+}
+
+.ricerca button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.stato {
+  text-align: center;
+  color: #b8b8d0;
+  min-height: 1.5em;
+  margin-bottom: 24px;
+}
+
+.stato.errore {
+  color: #ff8a8a;
+}
+
+/* ---------- Riquadro partner REZET ---------- */
+
+.rezet {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.rezet-marchio {
+  font-size: 0.8rem;
+  letter-spacing: 6px;
+  color: #b8b8d0;
+  margin-bottom: 6px;
+}
+
+.rezet h2 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.rezet-testo p {
+  line-height: 1.5;
+  color: #e0e0f0;
+}
+
+.rezet-link {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1e1e2f;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.rezet-link:hover {
+  opacity: 0.85;
+}
+
+.rezet-avviso {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: #9a9ab5;
+}
+
+.rezet-rituale {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.rezet-rituale li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #e0e0f0;
+}
+
+.rezet-rituale span {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #e94e77;
+}
+
+/* ---------- Simulazione REZET ---------- */
+
+.sim {
+  grid-column: 1 / -1;          /* occupa tutta la larghezza del riquadro */
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sim-testa h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.sim-testa p {
+  font-size: 0.9rem;
+  color: #b8b8d0;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.sim-corpo {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+}
+
+#sim-grafico {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+}
+
+/* Negli SVG l'attributo hidden non nasconde da solo: lo facciamo via CSS */
+#sim-grafico [hidden] {
+  display: none;
+}
+
+.sim-griglia line {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1;
+}
+
+.sim-asse text {
+  fill: #9a9ab5;
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.sim-area {
+  fill: url(#sim-sfumatura);
+}
+
+.sim-curva-con {
+  fill: none;
+  stroke: #e94e77;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sim-curva-senza {
+  fill: none;
+  stroke: #9a9ab5;
+  stroke-width: 2;
+  stroke-dasharray: 6 6;
+  stroke-linejoin: round;
+}
+
+#sim-drink text {
+  font-size: 16px;
+  text-anchor: middle;
+}
+
+.sim-marcatore-rezet line {
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 4;
+}
+
+.sim-marcatore-rezet text {
+  fill: #ffffff;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-anchor: middle;
+}
+
+.sim-playhead {
+  stroke: #ffffff;
+  stroke-width: 1;
+  opacity: 0.7;
+}
+
+/* Fiala con il livello che sale e scende */
+.fiala {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  width: 90px;
+}
+
+.fiala-vetro {
+  position: relative;
+  width: 38px;
+  flex: 1;
+  min-height: 140px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px 8px 19px 19px;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.fiala-livello {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0%;
+  background: linear-gradient(180deg, #ff6b94, #c4123f);
+}
+
+.fiala-valore {
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.fiala-etichetta {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9a9ab5;
+  text-align: center;
+}
+
+.sim-controlli {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.sim-controlli button {
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sim-controlli button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sim-controlli button.primario {
+  background: #e94e77;
+  border-color: #e94e77;
+}
+
+.sim-controlli button.primario:hover {
+  background: #ff5f88;
+}
+
+.sim-controlli button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.sim-stato {
+  font-size: 0.85rem;
+  color: #b8b8d0;
+  margin-left: auto;
+}
+
+.sim-legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #b8b8d0;
+}
+
+.sim-legenda i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.legenda-con { width: 22px; height: 3px; background: #e94e77; }
+.legenda-senza { width: 22px; height: 0; border-top: 2px dashed #9a9ab5; }
+.legenda-drink { width: 10px; height: 10px; border-radius: 50%; background: #ffffff; }
+
+/* Pulsante sulle schede cocktail */
+.aggiungi-drink {
+  margin-top: 4px;
+  padding: 10px 16px;
+  border: 1px solid rgba(233, 78, 119, 0.6);
+  border-radius: 999px;
+  background: transparent;
+  color: #ff8fb0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.aggiungi-drink:hover {
+  background: #e94e77;
+  color: #ffffff;
+}
+
+.aggiungi-drink:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.risultati {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.scheda {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.scheda img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.scheda-corpo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.scheda h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.etichette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.etichetta {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #d8d8ee;
+}
+
+.etichetta.alcolico {
+  background: rgba(233, 78, 119, 0.3);
+}
+
+.scheda h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b8b8d0;
+  margin-bottom: 6px;
+}
+
+.ingredienti {
+  list-style: none;
+}
+
+.ingredienti li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ingredienti li:last-child {
+  border-bottom: none;
+}
+
+.ingredienti .dose {
+  color: #b8b8d0;
+  white-space: nowrap;
+}
+
+.istruzioni {
+  line-height: 1.5;
+  color: #e0e0f0;
+}
+
+@media (max-width: 800px) {
+  .rezet { grid-template-columns: 1fr; gap: 20px; padding: 22px 20px; }
+  .sim-stato { margin-left: 0; width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .sim-corpo { flex-direction: column; align-items: center; }
+  .fiala { flex-direction: row; width: 100%; justify-content: center; gap: 14px; }
+  .fiala-vetro { min-height: 0; height: 60px; width: 140px; flex: none; border-radius: 8px 19px 19px 8px; }
+  .fiala-livello { top: 0; bottom: 0; right: auto; height: 100%; width: 0%; }
+}
+
+@media (max-width: 600px) {
+  body { padding: 24px 16px; }
+  .intestazione h1 { font-size: 1.8rem; }
+  .ricerca { flex-direction: column; align-items: stretch; }
+  .ricerca label { flex: none; text-align: left; }
+  .ricerca button { width: 100%; }
+}

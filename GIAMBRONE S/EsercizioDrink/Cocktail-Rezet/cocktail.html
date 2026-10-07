@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ricerca Cocktail</title>
+  <link rel="stylesheet" href="cocktail.css">
+</head>
+<body>
+
+  <header class="intestazione">
+    <h1>Ricerca Cocktail</h1>
+    <form id="form-ricerca" class="ricerca" autocomplete="off">
+      <label for="campo-ricerca">Per nome</label>
+      <input
+        type="text"
+        id="campo-ricerca"
+        placeholder="Digita il nome di un cocktail, es. Margarita"
+        required
+      >
+      <button type="submit">Cerca</button>
+    </form>
+
+    <form id="form-ingrediente" class="ricerca" autocomplete="off">
+      <label for="campo-ingrediente">Per ingrediente</label>
+      <input
+        type="text"
+        id="campo-ingrediente"
+        placeholder="Digita un ingrediente in inglese, es. Gin"
+        required
+      >
+      <button type="submit">Cerca</button>
+    </form>
+  </header>
+
+  <main>
+    <p id="stato" class="stato"></p>
+
+    <!-- Riquadro partner REZET: nascosto finché non ci sono risultati -->
+    <aside id="rezet" class="rezet" hidden>
+      <div class="rezet-testo">
+        <p class="rezet-marchio">REZET</p>
+        <h2>Due momenti. Un controllo.</h2>
+        <p>
+          Gel monodose da 10 ml alla vaniglia, con estratti naturali, vegano,
+          senza glutine e lattosio, made in Italy. Pensato per il momento in cui
+          decidi che il tuo ultimo cocktail è stato l'ultimo.
+        </p>
+        <a class="rezet-link" href="https://www.rezetdrink.it" target="_blank" rel="noopener">
+          Scopri REZET
+        </a>
+        <p class="rezet-avviso">
+          REZET non rende sicura la guida dopo aver consumato alcol.
+          Bevi responsabilmente.
+        </p>
+      </div>
+      <ol class="rezet-rituale">
+        <li><span>01</span>Dopo il tuo ultimo bicchiere, aspetta 10 minuti.</li>
+        <li><span>02</span>Apri REZET e bevilo.</li>
+        <li><span>03</span>Lascia passare 20-25 minuti.</li>
+        <li><span>04</span>Bevi un bicchiere d'acqua.</li>
+        <li><span>05</span>Da quel momento, niente più alcol.</li>
+      </ol>
+
+      <!-- Simulazione animata: alcol nel sangue durante la serata -->
+      <div class="sim">
+        <div class="sim-testa">
+          <h3>La tua serata, simulata</h3>
+          <p>
+            Aggiungi i cocktail che bevi con il pulsante sulle schede qui sotto,
+            poi prendi REZET e guarda come cambia la curva.
+            Illustrazione concettuale, non una misura reale.
+          </p>
+        </div>
+
+        <div class="sim-corpo">
+          <svg id="sim-grafico" viewBox="0 0 640 240" role="img" aria-label="Grafico dell'alcol nel sangue nel tempo">
+            <defs>
+              <linearGradient id="sim-sfumatura" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#e94e77" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#e94e77" stop-opacity="0"/>
+              </linearGradient>
+              <clipPath id="sim-clip">
+                <rect id="sim-clip-rect" x="0" y="0" width="0" height="240"/>
+              </clipPath>
+            </defs>
+
+            <g id="sim-griglia" class="sim-griglia"></g>
+
+            <g clip-path="url(#sim-clip)">
+              <path id="sim-area" class="sim-area" d=""/>
+              <path id="sim-curva-senza" class="sim-curva-senza" d=""/>
+              <path id="sim-curva-con" class="sim-curva-con" d=""/>
+              <g id="sim-drink"></g>
+            </g>
+
+            <g id="sim-marcatore-rezet" class="sim-marcatore-rezet" hidden>
+              <line x1="0" y1="20" x2="0" y2="210"/>
+              <text x="0" y="14">REZET</text>
+            </g>
+
+            <line id="sim-playhead" class="sim-playhead" x1="40" y1="20" x2="40" y2="210" hidden/>
+            <g id="sim-asse" class="sim-asse"></g>
+          </svg>
+
+          <div class="fiala">
+            <div class="fiala-vetro">
+              <div id="fiala-livello" class="fiala-livello"></div>
+            </div>
+            <span id="fiala-valore" class="fiala-valore">0.00</span>
+            <span class="fiala-etichetta">alcol nel sangue</span>
+          </div>
+        </div>
+
+        <div class="sim-controlli">
+          <button type="button" id="sim-btn-drink">+ Aggiungi un drink</button>
+          <button type="button" id="sim-btn-rezet" class="primario">Prendi REZET</button>
+          <button type="button" id="sim-btn-reset">Ricomincia</button>
+          <span id="sim-stato" class="sim-stato">Nessun drink ancora.</span>
+        </div>
+
+        <div class="sim-legenda">
+          <span><i class="legenda-con"></i> con REZET</span>
+          <span><i class="legenda-senza"></i> senza REZET</span>
+          <span><i class="legenda-drink"></i> un cocktail</span>
+        </div>
+      </div>
+    </aside>
+
+    <section id="risultati" class="risultati"></section>
+  </main>
+
+  <script src="cocktail.js"></script>
+  <script src="rezet.js"></script>
+
+</body>
+</html>

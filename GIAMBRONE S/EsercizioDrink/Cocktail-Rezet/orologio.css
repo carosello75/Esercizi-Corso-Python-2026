@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+
+.orologio {
+  text-align: center;
+  padding: 40px 60px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+#ora {
+  font-size: 6rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+#data {
+  margin-top: 12px;
+  font-size: 1.4rem;
+  color: #b8b8d0;
+  text-transform: capitalize;
+}
+
+@media (max-width: 600px) {
+  .orologio { padding: 30px 20px; }
+  #ora { font-size: 3.5rem; }
+  #data { font-size: 1rem; }
+}
